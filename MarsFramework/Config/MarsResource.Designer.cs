@@ -79,6 +79,15 @@ namespace MarsFramework.Config {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Testing\Tester\Competitive-tasks\MarsFramework\WorkSample\images.jpg.
+        /// </summary>
+        internal static string FilePath {
+            get {
+                return ResourceManager.GetString("FilePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to true.
         /// </summary>
         internal static string IsLogin {

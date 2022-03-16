@@ -1,4 +1,5 @@
-﻿using MarsFramework.Global;
+﻿using AutoItX3Lib;
+using MarsFramework.Global;
 using MarsFramework.Config;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
@@ -164,6 +165,16 @@ namespace MarsFramework.Pages
             SkillExchange.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "Skill-Exchange"));
             SkillExchange.SendKeys(Keys.Enter);
 
+            //WorkSample Upload
+            WorkSample.Click();
+            AutoItX3 autoIt = new AutoItX3();
+            autoIt.WinActivate("Open");
+            Thread.Sleep(1000);
+            autoIt.Send(Base.FilePath);
+            Thread.Sleep(2000);
+            autoIt.Send("{ENTER}");
+
+            Thread.Sleep(1000);
 
             Save.Click();
 
@@ -229,6 +240,14 @@ namespace MarsFramework.Pages
 
             SkillExchange.SendKeys(GlobalDefinitions.ExcelLib.ReadData(2, "Skill-Exchange"));
             SkillExchange.SendKeys(Keys.Enter);
+            //WorkSample Upload
+            WorkSample.Click();
+            AutoItX3 autoIt = new AutoItX3();
+            autoIt.WinActivate("Open");
+            Thread.Sleep(1000);
+            autoIt.Send(Base.FilePath);
+            Thread.Sleep(2000);
+            autoIt.Send("{ENTER}");
             Thread.Sleep(1000);
             Save.Click();
 
